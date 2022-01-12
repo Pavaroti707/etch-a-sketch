@@ -40,6 +40,10 @@ export default function Etch() {
     if (number >= 16 && number <= 100) {
       setNumberOfCells(digits);
 
+      if (digits.length > 1) {
+        return alert("You must use even numbers!");
+      }
+
       let cells = document.getElementsByClassName("etch-cell");
 
       for (let i = 0; i < cells.length; i++) {
@@ -47,9 +51,6 @@ export default function Etch() {
       }
     } else {
       alert("Number of cells must be between 16 and 100");
-    }
-    if (digits.length > 1) {
-      return alert("You must use even numbers!");
     }
   };
 
