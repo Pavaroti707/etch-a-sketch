@@ -44,14 +44,12 @@ export default function Etch() {
 
       setNumberOfCells(number);
 
-      }
-
       let cells = document.getElementsByClassName("etch-cell");
 
       for (let i = 0; i < cells.length; i++) {
         cells[i].style.background = "rgb(211,211,211)";
       }
-    } else {
+
       alert("Number of cells must be between 16 and 100");
     }
   };
