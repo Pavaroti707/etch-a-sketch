@@ -37,7 +37,7 @@ export default function Etch() {
   const resetHandler = (e) => {
     const number = prompt("Enter number of cells on board");
 
-    if (number >= 16 && number <= 100) {
+    if (number >= "16" && number <= "100") {
       setNumberOfCells(number);
 
       let cells = document.getElementsByClassName("etch-cell");
