@@ -36,9 +36,9 @@ export default function Etch() {
 
   const resetHandler = (e) => {
     const number = prompt("Enter number of cells on board");
-
-    if (number >= "16" && number <= "100") {
-      setNumberOfCells(number);
+    const digits = number.toString().split(".");
+    if (number >= 16 && number <= 100) {
+      setNumberOfCells(digits);
 
       let cells = document.getElementsByClassName("etch-cell");
 
@@ -47,6 +47,9 @@ export default function Etch() {
       }
     } else {
       alert("Number of cells must be between 16 and 100");
+    }
+    if (digits.length > 1) {
+      return alert("You must use even numbers!");
     }
   };
 
