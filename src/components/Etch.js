@@ -38,10 +38,12 @@ export default function Etch() {
     const number = prompt("Enter number of cells on board");
     const digits = number.toString().split(".");
     if (number >= 16 && number <= 100) {
-      setNumberOfCells(digits);
-
       if (digits.length > 1) {
-        return alert("You must use even numbers!");
+        return alert("You must use whole numbers!");
+      }
+
+      setNumberOfCells(number);
+
       }
 
       let cells = document.getElementsByClassName("etch-cell");
