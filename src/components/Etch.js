@@ -36,7 +36,9 @@ export default function Etch() {
 
   const resetHandler = (e) => {
     const number = prompt("Enter number of cells on board");
+
     const digits = number.toString().split(".");
+
     if (number >= 16 && number <= 100) {
       if (digits.length > 1) {
         return alert("You must use whole numbers!");
@@ -49,9 +51,7 @@ export default function Etch() {
       for (let i = 0; i < cells.length; i++) {
         cells[i].style.background = "rgb(211,211,211)";
       }
-
-      alert("Number of cells must be between 16 and 100");
-    }
+    } else alert("Number of cells must be between 16 and 100");
   };
 
   useEffect(() => {
