@@ -30,7 +30,7 @@ export default function Etch() {
   };
 
   const randomColor = (e) => {
-    setRandom(!random);
+    setRandom(true);
     setColor("rgb(125,125,125)");
   };
 
